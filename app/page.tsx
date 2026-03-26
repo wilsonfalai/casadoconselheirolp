@@ -33,8 +33,6 @@ const salaryRanges = [
   "Acima de R$ 25 mil",
 ];
 
-const defaultWhatsappNumber = "554791566697";
-
 const initialFormData = {
   name: "",
   email: "",
@@ -62,9 +60,7 @@ function formatWhatsapp(value: string) {
 }
 
 function buildWhatsAppUrl(data: typeof initialFormData) {
-  const digits =
-    process.env.NEXT_PUBLIC_WHATSAPP_NUMBER?.replace(/\D/g, "") ||
-    defaultWhatsappNumber;
+  const digits = process.env.NEXT_PUBLIC_WHATSAPP_NUMBER?.replace(/\D/g, "") ?? "";
   const message = [
     "Olá! Acabei de me inscrever no PFCC.",
     `Nome: ${data.name}`,
@@ -76,11 +72,7 @@ function buildWhatsAppUrl(data: typeof initialFormData) {
 
   const query = new URLSearchParams({ text: message }).toString();
 
-  if (digits) {
-    return `https://wa.me/${digits}?${query}`;
-  }
-
-  return `https://api.whatsapp.com/send?${query}`;
+  return `https://wa.me/${digits}?${query}`;
 }
 
 type CTAButtonProps = {
@@ -283,6 +275,10 @@ export default function Home() {
 
       if (!response.ok) {
         throw new Error("Falha ao salvar lead");
+      }
+
+      if (!process.env.NEXT_PUBLIC_WHATSAPP_NUMBER) {
+        throw new Error("WhatsApp não configurado");
       }
 
       const whatsappUrl = buildWhatsAppUrl(formData);
