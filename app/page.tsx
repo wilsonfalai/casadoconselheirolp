@@ -24,7 +24,6 @@ const menuItems = [
   { label: "Metodologia", href: "#metodologia" },
   { label: "Sobre", href: "#sobre" },
   { label: "Instrutores", href: "#instrutores" },
-  { label: "Jornada", href: "#jornada" },
 ];
 
 const salaryRanges = [
@@ -83,7 +82,7 @@ type CTAButtonProps = {
 
 function CTAButton({ children, className, onClick }: CTAButtonProps) {
   return (
-    <button type="button" className={className} onClick={onClick}>
+    <button type="button" className={`${className} cursor-pointer`} onClick={onClick}>
       {children}
     </button>
   );
@@ -146,7 +145,7 @@ function LeadModal({
           <button
             type="button"
             onClick={onClose}
-            className="inline-flex size-10 items-center justify-center rounded-full border border-white/10 bg-white/5 text-[#d7d2e0] transition-colors duration-200 hover:bg-white/10 hover:text-white"
+            className="inline-flex cursor-pointer items-center justify-center text-[1.35rem] text-[#d7d2e0] transition-colors duration-200 hover:text-white"
             aria-label="Fechar formulário"
           >
             <FontAwesomeIcon icon={faCircleXmark} />
@@ -310,12 +309,13 @@ export default function Home() {
             aria-label="Board Academy - voltar ao topo"
             className="flex items-center gap-3"
           >
-            <span className="grid size-11 place-items-center rounded-full border border-[#f1c28c]/50 text-sm font-semibold tracking-[0.22em] text-[#f1c28c]">
-              BA
-            </span>
-            <span className="text-[2.05rem] font-semibold leading-none tracking-[-0.045em] text-white">
-              Board Academy
-            </span>
+            <Image
+              src="/logo.png"
+              alt="Board Academy"
+              width={240}
+              height={72}
+              className="h-auto w-[180px] lg:w-[220px]"
+            />
           </a>
 
           <nav
@@ -335,7 +335,7 @@ export default function Home() {
 
           <CTAButton
             onClick={openModal}
-            className="inline-flex min-h-14 items-center justify-center rounded-[18px] bg-[#f6c794] px-8 text-lg font-medium !text-black transition-transform duration-200 hover:-translate-y-0.5"
+            className="inline-flex min-h-14 items-center justify-center whitespace-nowrap rounded-[18px] bg-[#f6c794] px-6 text-lg font-medium !text-black transition-transform duration-200 hover:-translate-y-0.5 lg:px-8"
           >
             Quero me certificar
           </CTAButton>
@@ -504,9 +504,6 @@ export default function Home() {
                 profissional com mais relevância, autoridade e aumento de
                 remuneração.
               </p>
-              <div className="mt-auto pt-8">
-                <div className="h-px w-full bg-white/10" />
-              </div>
             </article>
 
             <article className="group flex min-h-[340px] flex-col rounded-[28px] border border-[#f1c28c]/30 bg-[linear-gradient(160deg,rgba(35,40,51,0.92)_0%,rgba(88,57,36,0.88)_100%)] p-8 transition-colors duration-200 hover:border-[#f1c28c]/55">
@@ -521,9 +518,6 @@ export default function Home() {
                 querem atuar como conselheiros e abrir uma nova frente de valor
                 profissional.
               </p>
-              <div className="mt-auto pt-8">
-                <div className="h-px w-full bg-white/15" />
-              </div>
             </article>
 
             <article className="group flex min-h-[340px] flex-col rounded-[28px] border border-white/10 bg-[linear-gradient(180deg,rgba(35,40,51,0.7)_0%,rgba(17,20,28,0.96)_100%)] p-8 transition-colors duration-200 hover:border-[#f1c28c]/45">
@@ -538,9 +532,6 @@ export default function Home() {
                 contribuir de forma estratégica para a evolução de outros
                 negócios.
               </p>
-              <div className="mt-auto pt-8">
-                <div className="h-px w-full bg-white/10" />
-              </div>
             </article>
           </div>
 
@@ -583,7 +574,7 @@ export default function Home() {
             <div className="space-y-0 lg:pl-10">
               <div className="group border-b border-white/8 py-8 first:border-t first:border-white/8">
                 <div className="flex flex-col gap-4 lg:flex-row lg:items-start lg:justify-between">
-                  <span className="inline-flex size-12 items-center justify-center rounded-full border border-[#f1c28c]/35 bg-white/3 text-lg text-[#f1c28c]">
+                  <span className="inline-flex items-center justify-center text-[1.65rem] text-[#f1c28c]">
                     <FontAwesomeIcon icon={faSackDollar} />
                   </span>
                   <div className="max-w-[700px]">
@@ -601,7 +592,7 @@ export default function Home() {
 
               <div className="group border-b border-white/8 py-8">
                 <div className="flex flex-col gap-4 lg:flex-row lg:items-start lg:justify-between">
-                  <span className="inline-flex size-12 items-center justify-center rounded-full border border-[#f1c28c]/35 bg-white/3 text-lg text-[#f1c28c]">
+                  <span className="inline-flex items-center justify-center text-[1.65rem] text-[#f1c28c]">
                     <FontAwesomeIcon icon={faClock} />
                   </span>
                   <div className="max-w-[700px]">
@@ -619,7 +610,7 @@ export default function Home() {
 
               <div className="group border-b border-white/8 py-8">
                 <div className="flex flex-col gap-4 lg:flex-row lg:items-start lg:justify-between">
-                  <span className="inline-flex size-12 items-center justify-center rounded-full border border-[#f1c28c]/35 bg-white/3 text-lg text-[#f1c28c]">
+                  <span className="inline-flex items-center justify-center text-[1.65rem] text-[#f1c28c]">
                     <FontAwesomeIcon icon={faBriefcase} />
                   </span>
                   <div className="max-w-[700px]">
