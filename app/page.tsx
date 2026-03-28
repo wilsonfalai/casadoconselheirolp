@@ -314,11 +314,11 @@ export default function Home() {
             className="flex items-center gap-3"
           >
             <Image
-              src="/logo.png"
+              src="/logooutra.webp"
               alt="Board Academy"
-              width={240}
-              height={72}
-              className="h-auto w-[180px] lg:w-[220px]"
+              width={120}
+              height={36}
+              className="h-auto w-[72px] lg:w-[86px]"
             />
           </a>
 
