@@ -32,6 +32,8 @@ const salaryRanges = [
   "Acima de R$ 25 mil",
 ];
 
+const directCtaUrl = "https://boardbr.com/indicacao-bc";
+
 const initialFormData = {
   name: "",
   email: "",
@@ -247,7 +249,9 @@ export default function Home() {
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [formData, setFormData] = useState(initialFormData);
 
-  const openModal = () => setIsModalOpen(true);
+  const openModal = () => {
+    window.location.href = directCtaUrl;
+  };
   const closeModal = () => {
     if (!isSubmitting) {
       setIsModalOpen(false);
