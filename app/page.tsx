@@ -906,7 +906,7 @@ export default function Home() {
             </h2>
 
             <p className="mt-7 max-w-[58ch] text-[1.14rem] leading-[1.8] tracking-[-0.015em] text-[#d7d2e0]">
-              Ao se inscrever no Programa de Formação de Conselheri, você terá acesso a:
+              Ao se inscrever no Programa de Formação de Conselheiro, você terá acesso a:
             </p>
 
             <div className="mt-10 space-y-5">
