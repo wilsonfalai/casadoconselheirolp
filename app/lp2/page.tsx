@@ -79,14 +79,14 @@ function buildWhatsAppUrl(data: typeof initialFormData) {
 type CTAButtonProps = {
   children: ReactNode;
   className: string;
-  onClick: () => void;
+  href: string;
 };
 
-function CTAButton({ children, className, onClick }: CTAButtonProps) {
+function CTAButton({ children, className, href }: CTAButtonProps) {
   return (
-    <button type="button" className={`${className} cursor-pointer`} onClick={onClick}>
+    <a href={href} className={`${className} cursor-pointer`}>
       {children}
-    </button>
+    </a>
   );
 }
 
@@ -249,9 +249,6 @@ export default function Home() {
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [formData, setFormData] = useState(initialFormData);
 
-  const openModal = () => {
-    window.location.href = directCtaUrl;
-  };
   const closeModal = () => {
     if (!isSubmitting) {
       setIsModalOpen(false);
@@ -338,7 +335,7 @@ export default function Home() {
           </nav>
 
           <CTAButton
-            onClick={openModal}
+            href={directCtaUrl}
             className="inline-flex min-h-12 items-center justify-center whitespace-nowrap rounded-[18px] bg-[#f6c794] px-6 text-sm font-semibold uppercase tracking-[0.05em] !text-black transition-transform duration-200 hover:-translate-y-0.5 lg:min-h-14 lg:px-8"
           >
             Quero me certificar
@@ -370,7 +367,7 @@ export default function Home() {
 
               <div className="mt-10 flex">
                 <CTAButton
-                  onClick={openModal}
+                  href={directCtaUrl}
                   className="inline-flex min-h-14 items-center justify-center rounded-[18px] bg-[#f6c794] px-8 text-base font-semibold uppercase tracking-[0.05em] !text-black transition-transform duration-200 hover:-translate-y-0.5"
                 >
                   Garantir minha vaga
@@ -542,7 +539,7 @@ export default function Home() {
 
           <div className="mt-12 flex justify-center">
             <CTAButton
-              onClick={openModal}
+              href={directCtaUrl}
               className="inline-flex min-h-14 items-center justify-center rounded-[18px] bg-[#f6c794] px-8 text-lg font-medium !text-black transition-transform duration-200 hover:-translate-y-0.5"
             >
               QUERO FAZER MINHA INSCRIÇÃO
@@ -710,7 +707,7 @@ export default function Home() {
 
           <div className="mt-12 flex justify-center">
             <CTAButton
-              onClick={openModal}
+              href={directCtaUrl}
               className="inline-flex min-h-14 items-center justify-center rounded-[18px] bg-[#f6c794] px-10 text-lg font-semibold !text-black transition-transform duration-200 hover:-translate-y-0.5"
             >
               QUERO FAZER MINHA INSCRIÇÃO
@@ -968,7 +965,7 @@ export default function Home() {
 
             <div className="mt-12 flex">
               <CTAButton
-                onClick={openModal}
+                href={directCtaUrl}
                 className="inline-flex min-h-14 items-center justify-center rounded-[18px] bg-[#f6c794] px-8 text-lg font-medium !text-black transition-transform duration-200 hover:-translate-y-0.5"
               >
                 QUERO ME TORNAR UM CONSELHEIRO
