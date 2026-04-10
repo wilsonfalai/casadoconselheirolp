@@ -306,8 +306,8 @@ export default function Home() {
         onChange={updateFormData}
       />
       <main id="home" className="min-h-screen bg-[#f6f1e8] text-[#1f2430]">
-      <header className="border-b border-black/8 bg-[#fffdf8] shadow-[0_8px_28px_rgba(18,22,30,0.06)]">
-        <div className="mx-auto flex max-w-[1440px] items-center justify-between gap-8 px-6 py-5 lg:px-10">
+      <header className="sticky top-0 z-40 border-b border-black/8 bg-[#fffdf8]/95 shadow-[0_8px_28px_rgba(18,22,30,0.06)] backdrop-blur-md">
+        <div className="mx-auto flex max-w-[1440px] items-center justify-between gap-6 px-6 py-4 lg:px-10">
           <a
             href="#home"
             aria-label="Board Academy - voltar ao topo"
@@ -324,7 +324,7 @@ export default function Home() {
 
           <nav
             aria-label="Navegação principal"
-            className="hidden items-center gap-10 text-[1.05rem] font-medium text-[#202532] lg:flex"
+            className="hidden items-center gap-8 text-sm font-semibold uppercase tracking-[0.06em] text-[#202532] lg:flex"
           >
             {menuItems.map((item) => (
               <a
@@ -339,26 +339,27 @@ export default function Home() {
 
           <CTAButton
             onClick={openModal}
-            className="inline-flex min-h-14 items-center justify-center whitespace-nowrap rounded-[18px] bg-[#f6c794] px-6 text-lg font-medium !text-black transition-transform duration-200 hover:-translate-y-0.5 lg:px-8"
+            className="inline-flex min-h-12 items-center justify-center whitespace-nowrap rounded-[18px] bg-[#f6c794] px-6 text-sm font-semibold uppercase tracking-[0.05em] !text-black transition-transform duration-200 hover:-translate-y-0.5 lg:min-h-14 lg:px-8"
           >
             Quero me certificar
           </CTAButton>
         </div>
       </header>
 
-      <section className="bg-[#fffdf8] px-6 pb-10 pt-12 lg:px-10 lg:pb-0 lg:pt-24">
+      <section className="relative overflow-hidden bg-[#fffdf8] px-6 pb-12 pt-8 lg:px-10 lg:pb-12 lg:pt-10">
+        <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_18%_22%,rgba(169,109,45,0.10),transparent_24%),radial-gradient(circle_at_82%_18%,rgba(121,131,146,0.18),transparent_30%),linear-gradient(180deg,#fffdf8_0%,#f6f1e8_68%)]" />
         <div className="mx-auto grid max-w-[1440px] gap-12 lg:grid-cols-2 lg:items-center lg:gap-16">
-          <div className="flex w-full flex-col justify-center pt-6 lg:min-h-[640px]">
+          <div className="relative flex w-full flex-col justify-center pt-2 lg:min-h-[calc(100svh-128px)]">
             <div className="w-full">
-              <p className="text-[1.15rem] font-medium tracking-[-0.02em] text-[#b27636]">
-                PFCC Board Academy
+              <p className="text-[1rem] font-semibold uppercase tracking-[0.08em] text-[#b27636]">
+                PFCC BOARD ACADEMY
               </p>
 
-              <h1 className="mt-8 w-full text-[4.05rem] font-semibold leading-[0.97] tracking-[-0.08em] text-[#171b24] lg:text-[4.6rem]">
-                Formação e Certificação de Conselheiro Empresarial 
+              <h1 className="mt-6 w-full text-[4.05rem] font-semibold leading-[0.97] tracking-[-0.08em] text-[#171b24] lg:text-[4.6rem]">
+                Formação e Certificação de Conselheiro Empresarial
               </h1>
 
-              <div className="mt-14">
+              <div className="mt-10">
                 <p className="w-full text-[1.15rem] leading-[1.6] tracking-[-0.02em] text-[#555f70]">
                   Essa é a sua oportunidade de dar o próximo grande salto na sua
                   carreira. Aproveite a alta necessidade do mercado e torne-se
@@ -367,10 +368,10 @@ export default function Home() {
                 </p>
               </div>
 
-              <div className="mt-14 flex">
+              <div className="mt-10 flex">
                 <CTAButton
                   onClick={openModal}
-                  className="inline-flex min-h-14 items-center justify-center rounded-[18px] bg-[#f6c794] px-8 text-xl font-medium !text-black transition-transform duration-200 hover:-translate-y-0.5"
+                  className="inline-flex min-h-14 items-center justify-center rounded-[18px] bg-[#f6c794] px-8 text-base font-semibold uppercase tracking-[0.05em] !text-black transition-transform duration-200 hover:-translate-y-0.5"
                 >
                   Garantir minha vaga
                 </CTAButton>
@@ -378,10 +379,10 @@ export default function Home() {
             </div>
           </div>
 
-          <div id="video" className="relative flex w-full items-end pb-28 lg:min-h-[640px] lg:pb-24">
-            <div className="w-full overflow-hidden rounded-[28px] border border-black/8 bg-white shadow-[0_24px_60px_rgba(28,36,46,0.14)]">
+          <div id="video" className="relative flex w-full items-center lg:min-h-[calc(100svh-128px)]">
+            <div className="relative w-full overflow-hidden rounded-[28px] border border-black/8 bg-white shadow-[0_24px_60px_rgba(28,36,46,0.14)]">
               <iframe
-                src="https://www.youtube.com/embed/3h92vw6JVSU?rel=0"
+                src="https://www.youtube.com/embed/3h92vw6JVSU?autoplay=1&mute=1&playsinline=1&rel=0&modestbranding=1"
                 title="Apresentação da Formação e Certificação de Conselheiro Empresarial"
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                 referrerPolicy="strict-origin-when-cross-origin"
