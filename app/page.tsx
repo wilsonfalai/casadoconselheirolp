@@ -303,8 +303,8 @@ export default function Home() {
         onChange={updateFormData}
       />
       <main id="home" className="min-h-screen bg-[#0e1015] text-[#f8f4ef]">
-      <header className="sticky top-0 z-40 border-b border-white/5 bg-[#232833]/95 backdrop-blur-md">
-        <div className="mx-auto flex max-w-[1440px] items-center justify-between gap-6 px-6 py-4 lg:px-10">
+      <header className="sticky top-0 z-40 border-b border-white/5 bg-[#232833]/95 px-6 backdrop-blur-md lg:px-10">
+        <div className="mx-auto flex max-w-[1440px] items-center justify-between gap-6 py-4">
           <a
             href="#home"
             aria-label="Board Academy - voltar ao topo"
