@@ -975,13 +975,13 @@ export default function Home() {
           </div>
 
           <div className="relative">
-            <div className="relative overflow-hidden rounded-[34px] border border-white/8 bg-[#141923] shadow-[0_28px_80px_rgba(0,0,0,0.35)]">
+            <div className="relative overflow-hidden rounded-[34px] border border-white/8 bg-[#141923] shadow-[0_28px_80px_rgba(0,0,0,0.35)] lg:h-[560px]">
               <Image
                 src="/lp1/final.webp"
                 alt="Profissional em ambiente de estudo e trabalho"
                 width={1200}
                 height={900}
-                className="h-full w-full object-cover"
+                className="h-full w-full object-cover object-center lg:scale-[1.06]"
               />
             </div>
           </div>
