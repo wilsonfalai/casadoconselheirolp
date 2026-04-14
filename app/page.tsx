@@ -438,16 +438,18 @@ export default function Home() {
                     15h
                   </p>
                   <p className="mt-3 text-sm uppercase tracking-[0.2em] text-[#f1c28c]">
-                    média de trabalho remoto mensal
+                    média de trabalho
+                    <br />
+                    remoto mensal
                   </p>
                 </div>
 
                 <div className="border-l-2 border-[#f1c28c] pl-4">
                   <p className="text-[3rem] font-semibold leading-none tracking-[-0.08em] text-white lg:text-[3.5rem]">
-                    148.000
+                    +148.000
                   </p>
                   <p className="mt-3 text-sm uppercase tracking-[0.2em] text-[#f1c28c]">
-                    número aproximado de cadeiras vagas de conselheiro
+                    vagas de conselheiros no mercado
                   </p>
                 </div>
               </div>
@@ -458,11 +460,11 @@ export default function Home() {
 
           <div className="max-w-[650px]">
             <span className="inline-flex rounded-full border border-[#f1c28c]/30 px-5 py-2 text-sm font-medium tracking-[0.04em] text-[#f1c28c]">
-              Dados do Mercado
+              DADOS DO MERCADO
             </span>
 
             <h2 className="mt-7 text-[2.9rem] font-semibold leading-[1.02] tracking-[-0.06em] text-white lg:text-[4rem]">
-              A demanda por conselheiros qualificados cresce em ritmo acelerado.
+              Alta demanda por conselheiros qualificados
             </h2>
 
             <p className="mt-7 max-w-[56ch] text-[1.16rem] leading-[1.7] tracking-[-0.015em] text-[#d7d2e0]">
@@ -480,13 +482,13 @@ export default function Home() {
         className="border-t border-white/5 bg-[linear-gradient(#11141c_0%,#0e1015_100%)] px-6 py-20 lg:px-10 lg:py-28"
       >
         <div className="mx-auto max-w-[1440px]">
-          <div className="mx-auto max-w-[860px] text-center">
+          <div className="mx-auto max-w-[1050px] text-center">
             <span className="inline-flex rounded-full border border-[#f1c28c]/30 px-5 py-2 text-sm font-medium tracking-[0.04em] text-[#f1c28c]">
-              Para quem é este programa?
+              POSSO SER CONSELHEIRO?
             </span>
 
             <h2 className="mt-7 text-[3rem] font-semibold leading-[1.02] tracking-[-0.065em] text-white lg:text-[4.35rem]">
-             Para quem quer transformar experiência em nova posição.
+             Para quem deseja transformar a sua experiência em uma nova posição
 
             </h2>
 
@@ -552,18 +554,17 @@ export default function Home() {
         id="vantagens"
         className="border-t border-white/5 bg-[linear-gradient(180deg,#11141c_0%,#0e1015_100%)] px-6 py-20 lg:px-10 lg:py-28"
       >
-        <div className="mx-auto grid max-w-[1440px] gap-14 lg:grid-cols-[minmax(0,0.88fr)_minmax(0,1.12fr)] lg:gap-16">
+        <div className="mx-auto grid max-w-[1440px] gap-8 lg:grid-cols-[minmax(0,1.02fr)_minmax(0,0.98fr)] lg:gap-8">
           <div className="max-w-[620px]">
             <span className="inline-flex rounded-full border border-[#f1c28c]/30 px-5 py-2 text-sm font-medium tracking-[0.04em] text-[#f1c28c]">
-              Vantagens de trabalhar como um conselheiro
+              VANTAGEM DE TRABALHAR COMO UM CONSELHEIRO
             </span>
 
             <h2 className="mt-7 text-[3rem] font-semibold leading-[1.02] tracking-[-0.065em] text-white lg:text-[4.15rem]">
-              Uma posição de alto valor, baixa carga horária e grande potencial
-              de renda.
+              O próximo nível da sua carreira começa aqui
             </h2>
 
-            <p className="mt-7 max-w-[50ch] text-[1.14rem] leading-[1.7] tracking-[-0.015em] text-[#d7d2e0]">
+            <p className="mt-7 max-w-[60ch] text-[1.14rem] leading-[1.7] tracking-[-0.015em] text-[#d7d2e0]">
               Atuar como conselheiro permite ampliar impacto profissional sem
               depender de uma rotina operacional pesada. É uma forma estratégica
               de crescer mantendo liberdade, autoridade e remuneração.
@@ -576,7 +577,7 @@ export default function Home() {
             <div className="space-y-0 lg:pl-10">
               <div className="group border-b border-white/8 py-8 first:border-t first:border-white/8">
                 <div className="flex flex-col gap-4 lg:flex-row lg:items-start lg:justify-between">
-                  <span className="inline-flex items-center justify-center text-[1.65rem] text-[#f1c28c]">
+                  <span className="inline-flex shrink-0 items-start justify-center pt-2 text-[1.65rem] leading-none text-[#f1c28c]">
                     <FontAwesomeIcon icon={faSackDollar} />
                   </span>
                   <div className="max-w-[700px]">
@@ -594,7 +595,7 @@ export default function Home() {
 
               <div className="group border-b border-white/8 py-8">
                 <div className="flex flex-col gap-4 lg:flex-row lg:items-start lg:justify-between">
-                  <span className="inline-flex items-center justify-center text-[1.65rem] text-[#f1c28c]">
+                  <span className="inline-flex shrink-0 items-start justify-center pt-2 text-[1.65rem] leading-none text-[#f1c28c]">
                     <FontAwesomeIcon icon={faClock} />
                   </span>
                   <div className="max-w-[700px]">
@@ -612,7 +613,7 @@ export default function Home() {
 
               <div className="group border-b border-white/8 py-8">
                 <div className="flex flex-col gap-4 lg:flex-row lg:items-start lg:justify-between">
-                  <span className="inline-flex items-center justify-center text-[1.65rem] text-[#f1c28c]">
+                  <span className="inline-flex shrink-0 items-start justify-center pt-2 text-[1.65rem] leading-none text-[#f1c28c]">
                     <FontAwesomeIcon icon={faBriefcase} />
                   </span>
                   <div className="max-w-[700px]">
@@ -723,7 +724,7 @@ export default function Home() {
         <div className="mx-auto grid max-w-[1440px] gap-14 lg:grid-cols-[minmax(0,1.2fr)_minmax(0,0.8fr)] lg:items-center lg:gap-16">
           <div className="max-w-none">
             <span className="inline-flex rounded-full border border-[#f1c28c]/30 px-5 py-2 text-sm font-medium tracking-[0.04em] text-[#f1c28c]">
-              Sobre a Board Academy
+              SOBRE A BOARD ACADEMY
             </span>
 
             <h2 className="mt-7 text-[3rem] font-semibold leading-[1.02] tracking-[-0.065em] text-white lg:text-[4.1rem]">
@@ -774,9 +775,9 @@ export default function Home() {
         className="border-t border-white/5 bg-[linear-gradient(180deg,#11141c_0%,#0e1015_100%)] px-6 py-20 lg:px-10 lg:py-28"
       >
         <div className="mx-auto max-w-[1440px]">
-          <div className="mx-auto max-w-[980px] text-center">
+          <div className="mx-auto max-w-[1120px] text-center">
             <span className="inline-flex rounded-full border border-[#f1c28c]/30 px-5 py-2 text-sm font-medium tracking-[0.04em] text-[#f1c28c]">
-              Conheça os instrutores do PFCC
+              CONHEÇA OS INSTRUTORES DO PFCC
             </span>
 
             <h2 className="mt-7 text-[3rem] font-semibold leading-[1.02] tracking-[-0.065em] text-white lg:text-[4.1rem]">
@@ -798,7 +799,7 @@ export default function Home() {
                   alt="Diogenes Lima"
                   width={150}
                   height={150}
-                  className="size-28 object-cover sm:size-32"
+                  className="h-36 w-28 object-cover sm:h-40 sm:w-32"
                 />
               </div>
               <div>
@@ -822,7 +823,7 @@ export default function Home() {
                   alt="Alberto Malta"
                   width={150}
                   height={150}
-                  className="size-28 object-cover sm:size-32"
+                  className="h-36 w-28 object-cover sm:h-40 sm:w-32"
                 />
               </div>
               <div>
@@ -845,7 +846,7 @@ export default function Home() {
                   alt="Udo Kurt Gierlich"
                   width={150}
                   height={150}
-                  className="size-28 object-cover sm:size-32"
+                  className="h-36 w-28 object-cover sm:h-40 sm:w-32"
                 />
               </div>
               <div>
@@ -869,7 +870,7 @@ export default function Home() {
                   alt="Catarina Pohl"
                   width={150}
                   height={150}
-                  className="size-28 object-cover sm:size-32"
+                  className="h-36 w-28 object-cover sm:h-40 sm:w-32"
                 />
               </div>
               <div>
