@@ -897,7 +897,7 @@ export default function Home() {
         <div className="mx-auto grid max-w-[1440px] gap-14 lg:grid-cols-[minmax(0,0.94fr)_minmax(0,1.06fr)] lg:items-center lg:gap-16">
           <div className="max-w-[720px]">
             <span className="inline-flex rounded-full border border-[#f1c28c]/30 px-5 py-2 text-sm font-medium tracking-[0.04em] text-[#f1c28c]">
-              Sua jornada começa aqui
+              SUA JORNADA COMEÇA AQUI
             </span>
 
             <h2 className="mt-7 text-[3rem] font-semibold leading-[1.02] tracking-[-0.065em] text-white lg:text-[4.15rem]">
