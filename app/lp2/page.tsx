@@ -381,7 +381,7 @@ export default function Home() {
               <iframe
                 src="https://www.youtube.com/embed/3h92vw6JVSU?autoplay=1&mute=1&playsinline=1&rel=0&modestbranding=1"
                 title="Apresentação da Formação e Certificação de Conselheiro Empresarial"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                 referrerPolicy="strict-origin-when-cross-origin"
                 allowFullScreen
                 className="block aspect-[16/11] w-full border-0"
