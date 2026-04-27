@@ -16,6 +16,16 @@ import {
   faToolbox,
 } from "@fortawesome/free-solid-svg-icons";
 
+const menuItems = [
+  { label: "Home", href: "#home" },
+  { label: "Mercado", href: "#mercado" },
+  { label: "Programa", href: "#programa" },
+  { label: "Vantagens", href: "#vantagens" },
+  { label: "Metodologia", href: "#metodologia" },
+  { label: "Sobre", href: "#sobre" },
+  { label: "Instrutores", href: "#instrutores" },
+];
+
 const salaryRanges = [
   "Até R$ 10 mil",
   "De R$ 10 mil a R$ 25 mil",
@@ -293,9 +303,49 @@ export default function Home() {
         onChange={updateFormData}
       />
       <main id="home" className="min-h-screen bg-[#0e1015] text-[#f8f4ef]">
-      <section className="relative isolate flex min-h-[88svh] overflow-hidden border-b border-white/5 px-7 py-3 text-center lg:min-h-[560px] lg:px-10 lg:py-5">
+      <header className="sticky top-0 z-40 border-b border-white/5 bg-[#232833]/95 px-6 backdrop-blur-md lg:px-10">
+        <div className="mx-auto flex max-w-[1440px] items-center justify-between gap-6 py-4">
+          <a
+            href="#home"
+            aria-label="Board Academy - voltar ao topo"
+            className="flex items-center gap-3"
+          >
+            <Image
+              src="/board-academy-logo.webp"
+              alt="Board Academy"
+              width={120}
+              height={36}
+              className="h-auto w-[88px] lg:w-[104px]"
+            />
+          </a>
+
+          <nav
+            aria-label="Navegação principal"
+            className="hidden items-center gap-8 text-sm font-semibold uppercase tracking-[0.06em] text-white lg:flex"
+          >
+            {menuItems.map((item) => (
+              <a
+                key={item.href}
+                href={item.href}
+                className="transition-colors duration-200 hover:text-[#f1c28c]"
+              >
+                {item.label}
+              </a>
+            ))}
+          </nav>
+
+          <CTAButton
+            href={directCtaUrl}
+            className="inline-flex min-h-12 items-center justify-center whitespace-nowrap rounded-[18px] bg-[#f6c794] px-6 text-sm font-semibold uppercase tracking-[0.05em] !text-black transition-transform duration-200 hover:-translate-y-0.5 lg:min-h-14 lg:px-8"
+          >
+            Quero me certificar
+          </CTAButton>
+        </div>
+      </header>
+
+      <section className="relative isolate flex min-h-[88svh] overflow-hidden border-b border-white/5 px-7 py-5 text-left lg:min-h-[560px] lg:px-10 lg:py-7">
         <Image
-          src="/lp1/final.webp"
+          src="/3558192_1_177558567269d54988e10c6.webp"
           alt=""
           fill
           priority
@@ -305,16 +355,8 @@ export default function Home() {
         <div className="pointer-events-none absolute inset-0 -z-10 bg-[rgba(10,12,16,0.54)]" />
         <div className="pointer-events-none absolute inset-0 -z-10 bg-[linear-gradient(180deg,rgba(255,255,255,0.18)_0%,rgba(10,12,16,0.22)_24%,rgba(10,12,16,0.72)_100%)]" />
 
-        <div className="mx-auto flex w-full max-w-[980px] flex-col items-center justify-center">
-          <Image
-            src="/board-academy-logo.webp"
-            alt="Board Academy"
-            width={174}
-            height={52}
-            className="h-auto w-[106px] lg:w-[132px]"
-          />
-
-          <h1 className="mt-4 max-w-[720px] text-[2.25rem] font-normal leading-[1.08] tracking-[-0.035em] text-white drop-shadow-[0_2px_16px_rgba(0,0,0,0.45)] lg:mt-4 lg:max-w-[900px] lg:text-[2.75rem] lg:leading-[1.18]">
+        <div className="mx-auto flex w-full max-w-[1440px] flex-col items-start justify-center">
+          <h1 className="max-w-[720px] text-[2.25rem] font-normal leading-[1.08] tracking-[-0.035em] text-white drop-shadow-[0_2px_16px_rgba(0,0,0,0.45)] lg:max-w-[900px] lg:text-[2.75rem] lg:leading-[1.18]">
               Sua <strong className="font-extrabold">experiência executiva</strong>{" "}
               pode ser a chave para o{" "}
               <strong className="font-extrabold">próximo nível</strong> da sua
@@ -333,16 +375,17 @@ export default function Home() {
               <span className="block lg:inline">formados</span>
             </p>
 
-            <div className="mt-4 w-full max-w-[538px] rounded-full border-2 border-white px-8 py-4 text-[0.68rem] font-semibold uppercase leading-[2] tracking-[0.46em] text-white lg:mt-5 lg:px-10 lg:py-3 lg:text-[0.72rem]">
-              Maior ecossistema da América Latina | Certificação oficial
+            <div className="mt-4 max-w-[680px] text-[0.82rem] font-semibold uppercase leading-relaxed tracking-[0.18em] text-[#f6c794] lg:mt-5">
+              Maior ecossistema da América Latina <span className="text-[#f6c794]/55">|</span>{" "}
+              Certificação oficial
             </div>
 
-            <div className="mt-5 flex w-full max-w-[742px] flex-col items-center justify-center gap-3 lg:mt-7 lg:flex-row lg:gap-10">
+            <div className="mt-5 flex w-full max-w-[742px] flex-col items-start justify-start gap-3 lg:mt-7 lg:flex-row lg:gap-10">
               <CTAButton
                 href={directCtaUrl}
-                className="inline-flex min-h-[48px] w-full max-w-[312px] items-center justify-center rounded-[8px] bg-[#c6b38e] px-5 text-center text-[0.78rem] font-extrabold uppercase leading-tight !text-white shadow-[0_10px_25px_rgba(0,0,0,0.22)] transition-transform duration-200 hover:-translate-y-0.5 lg:min-h-[54px] lg:max-w-[352px] lg:text-[0.86rem]"
+                className="inline-flex min-h-12 w-full max-w-[312px] items-center justify-center whitespace-nowrap rounded-[18px] bg-[#f6c794] px-6 text-center text-sm font-semibold uppercase tracking-[0.05em] !text-black transition-transform duration-200 hover:-translate-y-0.5 lg:min-h-14 lg:max-w-[352px] lg:px-8"
               >
-                Falar com um especialista de carreira
+                Quero me tornar conselheiro
               </CTAButton>
             </div>
 
