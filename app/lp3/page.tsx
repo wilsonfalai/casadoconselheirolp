@@ -90,6 +90,98 @@ function CTAButton({ children, className, href }: CTAButtonProps) {
   );
 }
 
+function HeroBackground({ priority = false }: { priority?: boolean }) {
+  return (
+    <>
+      <Image
+        src="/3558192_1_177558567269d54988e10c6.webp"
+        alt=""
+        fill
+        priority={priority}
+        sizes="100vw"
+        className="absolute inset-0 -z-20 h-full w-full object-cover object-[45%_center] lg:object-center"
+      />
+      <div className="pointer-events-none absolute inset-0 -z-10 bg-[rgba(10,12,16,0.54)]" />
+      <div className="pointer-events-none absolute inset-0 -z-10 bg-[linear-gradient(180deg,rgba(255,255,255,0.18)_0%,rgba(10,12,16,0.22)_24%,rgba(10,12,16,0.72)_100%)]" />
+    </>
+  );
+}
+
+function HeroTextContent() {
+  return (
+    <div>
+      <h1 className="max-w-[720px] text-[2.25rem] font-normal leading-[1.08] tracking-[-0.035em] text-white drop-shadow-[0_2px_16px_rgba(0,0,0,0.45)] lg:max-w-[820px] lg:text-[2.75rem] lg:leading-[1.18]">
+        Sua <strong className="font-extrabold">experiência executiva</strong>{" "}
+        pode ser a chave para o{" "}
+        <strong className="font-extrabold">próximo nível</strong> da sua
+        carreira.
+      </h1>
+
+      <p className="mt-4 max-w-[600px] text-[1.125rem] font-medium leading-[1.4] text-white lg:mt-3 lg:max-w-[760px] lg:text-[1.12rem] lg:leading-[1.45]">
+        O PFCC — Programa de Formação e Certificação de Conselheiros da Board
+        Academy — prepara executivos sênior para atuar com autoridade em
+        conselhos corporativos.
+      </p>
+
+      <p className="mt-4 text-[1.65rem] font-extrabold uppercase leading-tight tracking-[0.12em] text-white lg:mt-5 lg:text-[1.62rem]">
+        <span className="text-[#cbb994]">+10.000</span>{" "}
+        <span className="block lg:inline">conselheiros</span>{" "}
+        <span className="block lg:inline">formados</span>
+      </p>
+
+      <div className="mt-4 max-w-[680px] text-[0.82rem] font-semibold uppercase leading-relaxed tracking-[0.18em] text-[#f6c794] lg:mt-5">
+        Maior ecossistema da América Latina{" "}
+        <span className="text-[#f6c794]/55">|</span> Certificação oficial
+      </div>
+
+      <div className="mt-5 flex w-full max-w-[742px] flex-col items-start justify-start gap-3 lg:mt-7 lg:flex-row lg:gap-10">
+        <CTAButton
+          href={directCtaUrl}
+          className="inline-flex min-h-12 w-full max-w-[312px] items-center justify-center whitespace-nowrap rounded-[18px] bg-[#f6c794] px-6 text-center text-sm font-semibold uppercase tracking-[0.05em] !text-black transition-transform duration-200 hover:-translate-y-0.5 lg:min-h-14 lg:max-w-[352px] lg:px-8"
+        >
+          Quero me tornar conselheiro
+        </CTAButton>
+      </div>
+    </div>
+  );
+}
+
+function HeroVideo() {
+  return (
+    <div id="video" className="relative w-full">
+      <div className="relative w-full overflow-hidden rounded-[28px] border border-white/10 bg-[#161a22]/85 shadow-[0_24px_60px_rgba(0,0,0,0.35)] backdrop-blur-sm">
+        <iframe
+          src="https://www.youtube.com/embed/3h92vw6JVSU?autoplay=1&mute=1&playsinline=1&rel=0&modestbranding=1"
+          title="Apresentação da Formação e Certificação de Conselheiro Empresarial"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          referrerPolicy="strict-origin-when-cross-origin"
+          allowFullScreen
+          className="block aspect-[16/11] w-full border-0"
+        />
+      </div>
+    </div>
+  );
+}
+
+function HeroStatsPanel() {
+  return (
+    <article className="relative overflow-hidden rounded-[28px] border border-[#f6c794]/55 bg-[linear-gradient(145deg,rgba(35,40,51,0.92)_0%,rgba(88,57,36,0.78)_100%)] p-8 shadow-[0_24px_60px_rgba(0,0,0,0.35)] backdrop-blur-sm lg:p-10">
+      <p className="text-sm font-semibold uppercase tracking-[0.28em] text-[#f6c794]">
+        Prova social
+      </p>
+      <p className="mt-8 text-[3.3rem] font-semibold leading-none tracking-[-0.08em] text-white lg:text-[4.35rem]">
+        +10.000
+      </p>
+      <h2 className="mt-4 text-[1.95rem] font-semibold leading-tight tracking-[-0.05em] text-[#f6c794] lg:text-[2.35rem]">
+        Conselheiros formados
+      </h2>
+      <p className="mt-6 max-w-[18ch] text-[1.25rem] leading-8 text-white">
+        que dominam governança corporativa
+      </p>
+    </article>
+  );
+}
+
 type LeadModalProps = {
   isOpen: boolean;
   isSubmitting: boolean;
@@ -344,65 +436,11 @@ export default function Home() {
       </header>
 
       <section className="relative isolate flex min-h-[88svh] overflow-hidden border-b border-white/5 px-7 py-5 text-left lg:min-h-[560px] lg:px-10 lg:py-7">
-        <Image
-          src="/3558192_1_177558567269d54988e10c6.webp"
-          alt=""
-          fill
-          priority
-          sizes="100vw"
-          className="absolute inset-0 -z-20 h-full w-full object-cover object-[45%_center] lg:object-center"
-        />
-        <div className="pointer-events-none absolute inset-0 -z-10 bg-[rgba(10,12,16,0.54)]" />
-        <div className="pointer-events-none absolute inset-0 -z-10 bg-[linear-gradient(180deg,rgba(255,255,255,0.18)_0%,rgba(10,12,16,0.22)_24%,rgba(10,12,16,0.72)_100%)]" />
+        <HeroBackground priority />
 
-        <div className="mx-auto grid w-full max-w-[1440px] gap-8 lg:grid-cols-[minmax(0,0.95fr)_minmax(420px,0.82fr)] lg:items-center lg:gap-12">
-          <div>
-            <h1 className="max-w-[720px] text-[2.25rem] font-normal leading-[1.08] tracking-[-0.035em] text-white drop-shadow-[0_2px_16px_rgba(0,0,0,0.45)] lg:max-w-[820px] lg:text-[2.75rem] lg:leading-[1.18]">
-              Sua <strong className="font-extrabold">experiência executiva</strong>{" "}
-              pode ser a chave para o{" "}
-              <strong className="font-extrabold">próximo nível</strong> da sua
-              carreira.
-            </h1>
-
-            <p className="mt-4 max-w-[600px] text-[1.125rem] font-medium leading-[1.4] text-white lg:mt-3 lg:max-w-[760px] lg:text-[1.12rem] lg:leading-[1.45]">
-              O PFCC — Programa de Formação e Certificação de Conselheiros da
-              Board Academy — prepara executivos sênior para atuar com
-              autoridade em conselhos corporativos.
-            </p>
-
-            <p className="mt-4 text-[1.65rem] font-extrabold uppercase leading-tight tracking-[0.12em] text-white lg:mt-5 lg:text-[1.62rem]">
-              <span className="text-[#cbb994]">+10.000</span>{" "}
-              <span className="block lg:inline">conselheiros</span>{" "}
-              <span className="block lg:inline">formados</span>
-            </p>
-
-            <div className="mt-4 max-w-[680px] text-[0.82rem] font-semibold uppercase leading-relaxed tracking-[0.18em] text-[#f6c794] lg:mt-5">
-              Maior ecossistema da América Latina <span className="text-[#f6c794]/55">|</span>{" "}
-              Certificação oficial
-            </div>
-
-            <div className="mt-5 flex w-full max-w-[742px] flex-col items-start justify-start gap-3 lg:mt-7 lg:flex-row lg:gap-10">
-              <CTAButton
-                href={directCtaUrl}
-                className="inline-flex min-h-12 w-full max-w-[312px] items-center justify-center whitespace-nowrap rounded-[18px] bg-[#f6c794] px-6 text-center text-sm font-semibold uppercase tracking-[0.05em] !text-black transition-transform duration-200 hover:-translate-y-0.5 lg:min-h-14 lg:max-w-[352px] lg:px-8"
-              >
-                Quero me tornar conselheiro
-              </CTAButton>
-            </div>
-          </div>
-
-          <div id="video" className="relative w-full">
-            <div className="relative w-full overflow-hidden rounded-[28px] border border-white/10 bg-[#161a22]/85 shadow-[0_24px_60px_rgba(0,0,0,0.35)] backdrop-blur-sm">
-              <iframe
-                src="https://www.youtube.com/embed/3h92vw6JVSU?autoplay=1&mute=1&playsinline=1&rel=0&modestbranding=1"
-                title="Apresentação da Formação e Certificação de Conselheiro Empresarial"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                referrerPolicy="strict-origin-when-cross-origin"
-                allowFullScreen
-                className="block aspect-[16/11] w-full border-0"
-              />
-            </div>
-          </div>
+        <div className="mx-auto grid w-full max-w-[1440px] gap-8 md:grid-cols-[minmax(0,0.95fr)_minmax(320px,0.82fr)] md:items-center lg:grid-cols-[minmax(0,0.95fr)_minmax(420px,0.82fr)] lg:gap-12">
+          <HeroTextContent />
+          <HeroVideo />
 
             <a
               href={directCtaUrl}
@@ -417,6 +455,23 @@ export default function Home() {
                 <path d="M16.04 3.2A12.74 12.74 0 0 0 5.1 22.48L3.6 28.8l6.45-1.48A12.75 12.75 0 1 0 16.04 3.2Zm0 2.4a10.35 10.35 0 0 1 8.78 15.82 10.33 10.33 0 0 1-13.86 3.45l-.44-.25-3.66.84.85-3.55-.28-.46A10.34 10.34 0 0 1 16.04 5.6Zm-4.52 4.8c-.23 0-.6.08-.92.43-.32.36-1.2 1.17-1.2 2.86 0 1.68 1.23 3.31 1.4 3.54.17.23 2.38 3.8 5.88 5.17 2.9 1.13 3.5.9 4.13.85.63-.06 2.04-.83 2.33-1.63.29-.8.29-1.49.2-1.63-.09-.14-.32-.23-.66-.4-.35-.17-2.04-1-2.36-1.12-.32-.12-.55-.17-.78.17-.23.35-.9 1.12-1.1 1.35-.2.23-.4.26-.75.09-.35-.17-1.46-.54-2.78-1.71-1.03-.92-1.72-2.05-1.92-2.4-.2-.35-.02-.54.15-.71.15-.15.35-.4.52-.6.17-.2.23-.35.35-.58.12-.23.06-.43-.03-.6-.09-.17-.78-1.88-1.07-2.58-.28-.67-.57-.58-.78-.59h-.67Z" />
               </svg>
             </a>
+        </div>
+      </section>
+
+      <section className="relative isolate flex min-h-[88svh] overflow-hidden border-b border-white/5 px-7 py-5 text-left lg:min-h-[560px] lg:px-10 lg:py-7">
+        <HeroBackground />
+
+        <div className="mx-auto flex w-full max-w-[1440px] items-center">
+          <HeroTextContent />
+        </div>
+      </section>
+
+      <section className="relative isolate flex min-h-[88svh] overflow-hidden border-b border-white/5 px-7 py-5 text-left lg:min-h-[560px] lg:px-10 lg:py-7">
+        <HeroBackground />
+
+        <div className="mx-auto grid w-full max-w-[1440px] gap-8 lg:grid-cols-[minmax(0,0.95fr)_minmax(420px,0.82fr)] lg:items-center lg:gap-12">
+          <HeroTextContent />
+          <HeroStatsPanel />
         </div>
       </section>
 
