@@ -123,13 +123,12 @@ function HeroTextContent() {
         conselhos corporativos.
       </p>
 
-      <p className="mt-4 text-[1.65rem] font-extrabold uppercase leading-tight tracking-[0.12em] text-white lg:mt-5 lg:text-[1.62rem]">
+      <p className="mt-4 whitespace-nowrap text-[0.98rem] font-extrabold uppercase leading-tight tracking-[0.02em] text-white lg:mt-5 lg:text-[1.62rem] lg:tracking-[0.12em]">
         <span className="text-[#cbb994]">+10.000</span>{" "}
-        <span className="block lg:inline">conselheiros</span>{" "}
-        <span className="block lg:inline">formados</span>
+        <span>conselheiros</span> <span>formados</span>
       </p>
 
-      <div className="mt-4 max-w-[680px] text-[0.82rem] font-semibold uppercase leading-relaxed tracking-[0.18em] text-[#f6c794] lg:mt-5">
+      <div className="mt-4 max-w-[680px] whitespace-nowrap text-[0.48rem] font-semibold uppercase leading-relaxed tracking-[0.02em] text-[#f6c794] lg:mt-5 lg:text-[0.82rem] lg:tracking-[0.18em]">
         Maior ecossistema da América Latina{" "}
         <span className="text-[#f6c794]/55">|</span> Certificação oficial
       </div>
