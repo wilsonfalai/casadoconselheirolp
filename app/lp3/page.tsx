@@ -163,25 +163,6 @@ function HeroVideo() {
   );
 }
 
-function HeroStatsPanel() {
-  return (
-    <article className="relative overflow-hidden rounded-[28px] border border-[#f6c794]/55 bg-[linear-gradient(145deg,rgba(35,40,51,0.92)_0%,rgba(88,57,36,0.78)_100%)] p-8 shadow-[0_24px_60px_rgba(0,0,0,0.35)] backdrop-blur-sm lg:p-10">
-      <p className="text-sm font-semibold uppercase tracking-[0.28em] text-[#f6c794]">
-        Prova social
-      </p>
-      <p className="mt-8 text-[3.3rem] font-semibold leading-none tracking-[-0.08em] text-white lg:text-[4.35rem]">
-        +10.000
-      </p>
-      <h2 className="mt-4 text-[1.95rem] font-semibold leading-tight tracking-[-0.05em] text-[#f6c794] lg:text-[2.35rem]">
-        Conselheiros formados
-      </h2>
-      <p className="mt-6 max-w-[18ch] text-[1.25rem] leading-8 text-white">
-        que dominam governança corporativa
-      </p>
-    </article>
-  );
-}
-
 type LeadModalProps = {
   isOpen: boolean;
   isSubmitting: boolean;
@@ -455,23 +436,6 @@ export default function Home() {
                 <path d="M16.04 3.2A12.74 12.74 0 0 0 5.1 22.48L3.6 28.8l6.45-1.48A12.75 12.75 0 1 0 16.04 3.2Zm0 2.4a10.35 10.35 0 0 1 8.78 15.82 10.33 10.33 0 0 1-13.86 3.45l-.44-.25-3.66.84.85-3.55-.28-.46A10.34 10.34 0 0 1 16.04 5.6Zm-4.52 4.8c-.23 0-.6.08-.92.43-.32.36-1.2 1.17-1.2 2.86 0 1.68 1.23 3.31 1.4 3.54.17.23 2.38 3.8 5.88 5.17 2.9 1.13 3.5.9 4.13.85.63-.06 2.04-.83 2.33-1.63.29-.8.29-1.49.2-1.63-.09-.14-.32-.23-.66-.4-.35-.17-2.04-1-2.36-1.12-.32-.12-.55-.17-.78.17-.23.35-.9 1.12-1.1 1.35-.2.23-.4.26-.75.09-.35-.17-1.46-.54-2.78-1.71-1.03-.92-1.72-2.05-1.92-2.4-.2-.35-.02-.54.15-.71.15-.15.35-.4.52-.6.17-.2.23-.35.35-.58.12-.23.06-.43-.03-.6-.09-.17-.78-1.88-1.07-2.58-.28-.67-.57-.58-.78-.59h-.67Z" />
               </svg>
             </a>
-        </div>
-      </section>
-
-      <section className="relative isolate flex min-h-[88svh] overflow-hidden border-b border-white/5 px-7 py-5 text-left lg:min-h-[560px] lg:px-10 lg:py-7">
-        <HeroBackground />
-
-        <div className="mx-auto flex w-full max-w-[1440px] items-center">
-          <HeroTextContent />
-        </div>
-      </section>
-
-      <section className="relative isolate flex min-h-[88svh] overflow-hidden border-b border-white/5 px-7 py-5 text-left lg:min-h-[560px] lg:px-10 lg:py-7">
-        <HeroBackground />
-
-        <div className="mx-auto grid w-full max-w-[1440px] gap-8 lg:grid-cols-[minmax(0,0.95fr)_minmax(420px,0.82fr)] lg:items-center lg:gap-12">
-          <HeroTextContent />
-          <HeroStatsPanel />
         </div>
       </section>
 
