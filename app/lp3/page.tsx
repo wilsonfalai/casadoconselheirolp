@@ -117,7 +117,7 @@ function HeroTextContent() {
         carreira.
       </h1>
 
-      <p className="mt-4 max-w-[600px] text-[1.125rem] font-medium leading-[1.4] text-white lg:mt-3 lg:max-w-[760px] lg:text-[1.12rem] lg:leading-[1.45]">
+      <p className="mt-4 max-w-[600px] text-[1.05rem] font-medium leading-[1.4] text-white lg:mt-3 lg:max-w-[760px] lg:text-[1.12rem] lg:leading-[1.45]">
         O PFCC — Programa de Formação e Certificação de Conselheiros da Board
         Academy — prepara executivos sênior para atuar com autoridade em
         conselhos corporativos.
